@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Quick QR</title><meta charset='utf-8'></head>
+<body style='font-family:sans-serif;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;'>
+<div style='text-align:center;background:#1e293b;padding:24px;border-radius:12px;'>
+<h2>QR Generator</h2><input id='t' value='https://github.com' style='padding:8px;border-radius:4px;border:none;'><br><br>
+<button onclick='g()' style='padding:8px 16px;background:#3b82f6;color:#fff;border:none;border-radius:4px;cursor:pointer;'>Generate</button>
+<div id='out' style='margin-top:16px;'></div>
+</div>
+<script>function g(){document.getElementById('out').innerHTML='<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+encodeURIComponent(document.getElementById('t').value)+'">';}</script>
+</body></html>
